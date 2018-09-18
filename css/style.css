@@ -360,9 +360,6 @@
       margin-bottom: 5px;
       font-size: '16px';
       font-family: 'Nunito'; }
-  @media (max-width: 575.98px) {
-    .company-roadmap section {
-      display: none; } }
 
 .over-word {
   margin-top: 100px; }
@@ -596,5 +593,3 @@
   padding-top: 5px;
   font-size: 30px;
   color: #242c3e; }
-
-/*# sourceMappingURL=style.css.map */
