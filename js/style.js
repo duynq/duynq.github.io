@@ -1,24 +1,30 @@
 $(function () {
-  $(".load-more-button").click(function () {
-    $(".load-more-icon").show();
-    $(".load-less-button").show();
-    $(this).hide();
-  });
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
-  $(".load-less-button").click(function () {
-    $(".load-more-icon").hide();
-    $(".load-more-button").show();
-    $(this).hide();
-  });
-  $("li").click(function () {
-    $(".timeline-dialog").hide();
-    var timeline_dialog = $(this).find(".timeline-dialog")[0];
-    if (timeline_dialog != "undefined") {
-      var number_id = timeline_dialog.id.split("-")[1];
-      for (var i = 0; i < number_id; i++) {
-        var id_dialog = "#dialog-" + number_id;
-        $(id_dialog).show();
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
       }
-    }
-  });
+    });
+  }
+  for(i = 1; i < 7; i++){
+    document.getElementById("btn"+i).addEventListener(
+      "click",
+      function(event) {
+        if (event.target.value === "+") {
+          console.log(event.target.value);
+          event.target.value = "-";
+        } else {
+          event.target.value = "+";
+        }
+      },
+      false
+    );
+  }
 });

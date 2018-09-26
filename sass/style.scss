@@ -2,10 +2,10 @@ $white: #ffffff;
 
 .container-header {
   padding-top: 50px;
-  background-image: linear-gradient(to right, #252d40, #111626);
-  .sign-key-logo {
-    margin-right: 50px;
-  }
+  background-image: linear-gradient(to right, #252d40, #ffffff);
+  // .sign-key-logo {
+  //   // margin-right: 0px;
+  // }
 
   .navbar-collapse {
     color: $white;
@@ -487,6 +487,11 @@ $white: #ffffff;
       font-size: '16px';
       font-family: 'Nunito';
     }
+  }
+  @media (max-width: 575.98px) {
+    // section {
+    //   display: none;
+    // }
   }
 }
 
